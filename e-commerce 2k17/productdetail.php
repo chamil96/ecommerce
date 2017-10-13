@@ -27,7 +27,6 @@
                   <input id='quantity' name='quantity' min='1' max='200' type= 'number' value='' required>
                   <input id='add_btn' type='submit' name='submit' value='Add To Cart'>
                 </form>
-                <input id='remove_btn' type='submit' name='submit' value='Clear Cart'>
               </div>
             </div>
           ";
