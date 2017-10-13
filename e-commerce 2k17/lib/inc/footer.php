@@ -6,8 +6,8 @@
   </footer><!-- footer -->
 </div><!-- bottom_wrapper -->
 </div><!-- container -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-<script type="text/javascript" src="lib/js/function.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><!-- links google provided jquery cdn -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script><!-- fotorama slide show cdn -->
+<script type="text/javascript" src="lib/js/function.js"></script><!-- links js to website -->
 </body>
 </html>

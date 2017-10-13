@@ -12,6 +12,7 @@
 
             $db = new PDO("mysql:host=localhost;dbname=chamiltonFinal;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
 
+            //Query that selects all products from my database
             $select = 'SELECT * FROM productsinstock';
 
             //if statements to check if a category was selected or not

@@ -1,6 +1,8 @@
 <?php
 error_reporting(0);
+//Using session start to keep track of things added to the cart
 session_start();
+//session cart variable that increases by the quantity value from form
 $_SESSION['cart'] = $_SESSION['cart'] + $_GET['quantity'];
 ?>
 
