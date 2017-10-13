@@ -43,8 +43,8 @@
 
                 try {
 
-                  
-                  $db = new PDO("mysql:host=localhost;dbname=chamilton_stockroom;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
+
+                  $db = new PDO("mysql:host=localhost;dbname=chamiltonFinal;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
 
                   $insert = "INSERT INTO commentdata (fname, lname, email, comment) VALUES (:fname, :lname, :email, :comment)";
 
