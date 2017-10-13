@@ -1,6 +1,6 @@
 <?php
-  include "lib/inc/header.php";
-  include "lib/inc/shopnav.php";
+  include ("lib/inc/header.php");
+  include ("lib/inc/shopnav.php");
 ?>
       <div class="row">
         <h2 id="shop_title">Welcome</h2>
@@ -9,8 +9,8 @@
       <div class="main_content row">
         <?php
           try {
-            $db = new PDO("mysql:host=localhost;dbname=chamilton_stockroom;port=8888", "root", "root");
-            // $db = new PDO("mysql:host=localhost;dbname=chamilton_stockroom;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
+
+            $db = new PDO("mysql:host=localhost;dbname=chamilton_stockroom;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
 
             $select = 'SELECT * FROM productsinstock';
 

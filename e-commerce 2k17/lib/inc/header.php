@@ -1,6 +1,8 @@
 <?php
-  session_start();
+session_start();
+$_SESSION['cart'] = $_SESSION['cart'] + $_GET['quantity'];
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -25,10 +27,8 @@
               <li class="shop"><a href="shop.php">Shop</a></li>
               <li class="contact"><a href="contact.php">Contact Us</a></li>
               <li class="search"><a href="search.php">Search</a></li>
+              <li><span><p><?php echo $_SESSION['cart']?></p><img class="cart" src="lib/img/carticon.png" alt="carticon"></span></li>
             </ul>
           </nav><!-- nav -->
         </div><!-- columns one-third -->
-        <div class="columns one-third">
-          <span><p><?php $_SESSION["quantity"]?></p><img class="cart" src="lib/img/carticon.png" alt="carticon"></span>
-        </div>
       </div><!-- top_wrapper -->

@@ -1,5 +1,5 @@
 <?php
-  include "lib/inc/header.php";
+  include ("lib/inc/header.php");
 ?>
       <div class="main_content row">
 
@@ -37,13 +37,14 @@
                 </div>
               </fieldset>
             </form>
+            </div>
             <?php
               if (!empty($_POST)) {
 
                 try {
 
-                  $db = new PDO("mysql:host=localhost;dbname=chamilton_stockroom;port=8888", "root", "root");
-                  // $db = new PDO("mysql:host=localhost;dbname=chamilton_stockroom;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
+                  
+                  $db = new PDO("mysql:host=localhost;dbname=chamilton_stockroom;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
 
                   $insert = "INSERT INTO commentdata (fname, lname, email, comment) VALUES (:fname, :lname, :email, :comment)";
 
@@ -61,13 +62,15 @@
                 }
                   try {
                         $results = $db->query("SELECT fname, lname, comment FROM commentdata ORDER BY comment_id DESC");
+
+                        $list = $results->fetchAll(PDO::FETCH_ASSOC);
+
                       } catch (Exception $e) {
                         echo "Bad query";
                       }
-                      $list = $results->fetchAll(PDO::FETCH_ASSOC);
                 }
             ?>
-        </div>
+
         <div id="comment_section" class="columns one-half">
           <ul>
             <?php foreach ($list as $comments) {
@@ -86,5 +89,5 @@
       $("#contactform").validate();
       </script>
 <?php
-  include "lib/inc/footer.php";
+  include ("lib/inc/footer.php");
 ?>

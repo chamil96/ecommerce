@@ -1,13 +1,11 @@
 <?php
-  session_start();
-  include "lib/inc/header.php";
-  $_SESSION["quantity"] = $_SESSION["quantity"] + $_GET["quantity"];
+  include ("lib/inc/header.php");
 ?>
   <div class="main_content row">
     <?php
       try {
-        $db = new PDO("mysql:host=localhost;dbname=chamilton_stockroom;port=8888", "root", "root");
-        // $db = new PDO("mysql:host=localhost;dbname=chamilton_stockroom;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
+
+        $db = new PDO("mysql:host=localhost;dbname=chamilton_stockroom;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
 
         $productdetails = 'SELECT * FROM productsinstock WHERE id = :id';
 
@@ -17,17 +15,18 @@
 
         foreach($prep as $details) {
           echo "
-            <div class=\"details_content\">
+            <div class='details_content'>
                 <h3>{$details['name']}</h3>
-                <figure><a href=\"productdetail.php?id={$details['id']}\"><img src=\"{$details['img']}\" alt=\"{$details['name']}\"></a></figure>
+                <figure><a href='productdetail.php?id={$details['id']}''><img src='{$details['img']}' alt='{$details['name']}''></a></figure>
                 <figcaption>{$details['description']}</figcaption>
                 <figcaption>\${$details['price']}</figcaption>
               <div>
-                <form class=\"\" action=\"shop.php\" method=\"GET\">
-                  <label for=\"quantity\">Quantity:</label>
-                  <input id=\"quantity\" name=\"quantity\" min=\"1\" max=\"20\" type=\"number\" value=\"\" required>
-                  <input id=\"add_btn\" type=\"submit\" name=\"submit\" value=\"Add To Cart\">
+                <form action='shop.php' method='\GET'>
+                  <label for='quantity'>Quantity:</label>
+                  <input id='quantity' name='quantity' min='1' max='200' type= 'number' value='' required>
+                  <input id='add_btn' type='submit' name='submit' value='Add To Cart'>
                 </form>
+                <input id='remove_btn' type='submit' name='submit' value='Clear Cart'>
               </div>
             </div>
           ";
@@ -48,5 +47,5 @@
     </script>
   </div>
 <?php
-  include "lib/inc/footer.php";
+  include ("lib/inc/footer.php");
 ?>

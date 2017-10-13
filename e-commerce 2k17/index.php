@@ -1,5 +1,5 @@
 <?php
-  include "lib/inc/header.php";
+  include ("lib/inc/header.php");
 ?>
       <div class="main_content row">
         <div class="fotorama" data-autoplay="4000">
@@ -9,5 +9,5 @@
         </div><!-- fotorama -->
       </div><!-- main_content -->
 <?php
-  include "lib/inc/footer.php";
+  include ("lib/inc/footer.php");
 ?>
