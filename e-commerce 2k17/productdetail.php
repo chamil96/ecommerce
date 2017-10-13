@@ -4,11 +4,12 @@
   <div class="main_content row">
     <?php
       try {
-
+        //Establishes a connection to a database
         $db = new PDO("mysql:host=localhost;dbname=chamiltonFinal;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
 
         $productdetails = 'SELECT * FROM productsinstock WHERE id = :id';
 
+        //prepare statement to protect from sql injection
         $prep = $db->prepare($productdetails);
         $prep->bindParam(':id', strip_tags($_GET['id']));
         $prep->execute();

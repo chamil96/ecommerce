@@ -14,6 +14,7 @@
 
             $select = 'SELECT * FROM productsinstock';
 
+            //if statements to check if a category was selected or not
             if (!empty($_GET['category'])) {
               $select = $select . ' WHERE category = :category ';
             }
