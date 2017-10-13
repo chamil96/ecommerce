@@ -10,7 +10,7 @@
         <?php
           try {
 
-            $db = new PDO("mysql:host=localhost;dbname=chamilton_stockroom;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
+            $db = new PDO("mysql:host=localhost;dbname=chamiltonFinal;port=8888", "r2hstudent", "SbFaGzNgGIE8kfP");
 
             $select = 'SELECT * FROM productsinstock';
 
