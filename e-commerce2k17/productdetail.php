@@ -11,6 +11,7 @@
 
         //prepare statement to protect from sql injection
         $prep = $db->prepare($productdetails);
+        //replacing :id with a value that wont be executed but read instead
         $prep->bindParam(':id', strip_tags($_GET['id']));
         $prep->execute();
 

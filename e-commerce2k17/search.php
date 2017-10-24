@@ -55,13 +55,13 @@
 
         //I used switch statements to check the value of the select and used the proper queries for it
         switch (!empty($_GET['price'])) {
-          case ($_GET['price'] == 'high'):
+          case ('high'):
             $searchPrice = "SELECT * FROM productsinstock ORDER BY price DESC";
             $prep = $db->prepare($searchPrice);
             $prep->execute();
             break;
 
-          case ($_GET['price'] == 'low'):
+          case ('low'):
             $searchPrice = "SELECT * FROM productsinstock ORDER BY price ASC";
             $prep = $db->prepare($searchPrice);
             $prep->execute();
